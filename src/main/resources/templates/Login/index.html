@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Iconos -->
+    
+    <div class="fadeIn first">
+      <img src="/static/img/User_Avatar.png" th:src="@{/img/User_Avatar.png}" id="icon" alt="User Icon">
+    </div>
+
+    <!-- Formulario Login -->
+    <form action="/Usuarios" method="post" >
+      <input type="text"  class="fadeIn second" name="username" placeholder="User">     
+      <input type="password"  class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" name="accion" value="login">
+      <input type="button" class="fadeIn fourth" onclick="location.href='VISTAS/Login/registro.jsp';" value="registro">
+    </form>
+
+    <!-- Recordar Credenciales -->
+    <div id="formFooter">
+      <a class="underlineHover" href="">***In User and Passowrd use admin***</a>
+      <a class="underlineHover" href="vistas/Login/registro.html" th:href="@{/Login/registro.html}">***Or Register Here***</a>
+    </div>
+
+  </div>
+</div>
+    
+</body>
+</html>
